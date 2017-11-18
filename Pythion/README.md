@@ -8,3 +8,5 @@ lifespan of a given geographic region. This project utilizes various data scrapi
 
 Our group named itself "The Pythion Oracle," a reference to the Pythian Oracle at Delphi, a figure of Greek mythology known for its
 otherworldly precognition.
+
+Running the pythion.py file in a terminal will create return a URL for the web application.
