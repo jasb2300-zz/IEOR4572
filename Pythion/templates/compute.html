@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% block contents %}
+	<img name="{{ attribute }} Graph" src="{{ url_for('static', filename='plot.png') }}">
+	<table name="Computational Results" align="center">
+		<tr>
+			<td>Training MSE</td>
+			<td>Test MSE</td>
+			<td>Overall Correlation</td>
+			<td>Overall R^2</td>
+		</tr>
+		<tr>
+			{% for value in values %}
+			<td>{{value}}</td>
+			{% endfor %}
+		</tr>
+	</table>
+{% endblock %}

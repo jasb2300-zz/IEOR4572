@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% if session.data_loaded %}
+		<div class=image>
+            <img name="lifespan_world" src="{{ url_for('static', filename='lifespan_world.png') }}" align:"center">
+		</div>
+		<div class=form>
+			<form id="Pythion" name="attribute" method="GET">
+				<fieldset>
+					<legend>Attributes</legend>
+					<select form="Pythion" name="attribute" required=True>
+						<option selected=True disabled=True></option>
+						<option>Total population (000s)</option>
+						<option>Maternal mortality ratio (per 100 000 live births)</option>
+						<option>Proportion of births attended by skilled health personnel (%)</option>
+						<option>Under-five mortality rate (per 1000 live births)</option>
+						<option>Neonatal mortality rate (per 1000 live births)</option>
+						<option>New HIV infections among adults 15-49 years old (per 1000 uninfected population)</option>
+						<option>TB incidence (per 100 000 population)</option>
+						<option>Malaria incidence (per 1000 population at risk)</option>
+						<option>Infants receiving three doses of hepatitis B vaccine (%)</option>
+						<option>Probability of dying from any of CVD, cancer, diabetes, CRD between age 30 and exact age 70 (%)</option>
+						<option>Suicide mortality rate (per 100 000 population)</option>
+						<option>Total alcohol per capita (15 years of age) consumption, in litres of pure alcohol, projected estimates</option>
+						<option>Road traffic mortality rate (per 100 000 population)</option>
+						<option>Proportion of married or in-union women of reproductive age who have their need for family planning satisfied with modern methods (%)</option>
+						<option>Adolescent birth rate (per 1000 women aged 15-19 years)</option>
+						<option>Mortality rate attributed to household and ambient air pollution (per 100 000 population)</option>
+						<option>Mortality rate attributed to exposure to unsafe WASH services (per 100 000 population)</option>
+						<option>Mortality rate from unintentional poisoning (per 100 000 population)</option>
+						<option>Skilled health professionals density (per 10 000 population)</option>
+						<option>Average of 13 International Health Regulations core capacity scores</option>
+						<option>Prevalence of stunting in children under 5 (%)</option>
+						<option>Prevalence of wasting in children under 5 (%)</option>
+						<option>Prevalence of overweight in children under 5 (%)</option>
+						<option>Proportion of population using improved drinking-water sources (%)</option>
+						<option>Proportion of population using improved sanitation (%)</option>
+						<option>Proportion of population with primary reliance on clean fuels (%)</option>
+						<option>Annual mean concentrations of fine particulate matter (PM2.5) in urban areas (µg/m3)</option>
+						<option>Average death rate due to natural disasters (per 100 000 population)</option>
+                        <option>Reported number of people requiring interventions against NTDs</option>
+						<option>Mortality rate due to homicide (per 100 000 population)</option>
+						<option>Estimated direct deaths from major conflicts (per 100 000 population)</option>
+					</select>
+					<button  form="Pythion" formaction="/compute" formtarget="Plot">Compute</button>
+				</fieldset>
+			</form>
+		</div>
+		<div class=page>
+			{% block contents %}{% endblock %}
+		</div>
+	{% else %}
+		<dir class="app-error">Error</dir>
+	{% endif %}
+{% endblock %}

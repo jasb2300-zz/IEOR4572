@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		{% block head %}
+		<title>The Pythion Oracle</title>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+		<meta http-Equiv="Cache-Control" Content="no-cache" />
+		<meta http-Equiv="Pragma" Content="no-cache" />
+		<meta http-Equiv="Expires" Content="0" />
+		{% endblock %}
+	</head>
+	<body>
+		<div class=header>
+			<h1>The Pythion Oracle</h1>
+			<h2>Correlating Lifestyle and Lifespan</h2>
+		</div>
+		<div class=page>
+		{% block content %}{% endblock %}
+		</div>
+		<div class=footer>
+			{% block footer %}
+			<span>The Pythion Oracle:<br></span>
+			<span>Correlating Lifestyle and Lifespan<br></span>
+			<span>Emily Jin and Jorge Solis<br></span>
+			<span>Data Analyics for Operations Research<br></span>
+			<span>Professor Hardeep Johar<br></span>
+			{% endblock %}
+		</div>
+	</body>
+</html>
