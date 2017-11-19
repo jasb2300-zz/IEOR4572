@@ -3,10 +3,10 @@ team selected and submitted a public dataset for review and then created a web a
 time and return some useful result.
 
 Our project manipulates data made publicly available by the World Health Organization to create a linear regression model that plots
-the correlation between various selected parameters such as access to contraceptive methods or rates of teenage smoking and the average
+the correlation between various selected parameters, such as access to contraceptive methods or rates of teenage smoking, with the average
 lifespan of a given geographic region. This project utilizes various data scraping, statistical analysis, and web application libraries.
 
 Our group named itself "The Pythion Oracle," a reference to the Pythian Oracle at Delphi, a figure of Greek mythology known for its
 otherworldly precognition.
 
-Running the pythion.py file in a terminal will create return a URL for the web application.
+Running the pythion.py file in a terminal will host an IP address and return a URL for the web application.
